@@ -1,9 +1,9 @@
 {
-  "name": "my-angular-phone-catalog",
+  "name": "",
   "private": true,
   "version": "0.0.0",
-  "description": "My realization of angular phone-catalog",
-  "repository": "https://github.com/Meprobez/my-angular-phone-catalog",
+  "description": "",
+  "repository": "",
   "license": "MIT",
   "devDependencies": {
     
@@ -87,16 +87,14 @@
     "protractor": "protractor e2e-tests/protractor.conf.js",
 	
 	"install-types":"typings install dt~angular  && typings install -g dt~jquery && typings install dt~lodash && typings install -g dt~jasmine && typings install -g dt~protractor && typings install -g dt~mocha",
-	
-	"uglify": "uglifyjs ./app/core/spell-module/*.js -c -m  --reserve-domprops --source-map-inline -o ./app/static/list/spell.min.js",
 
-	"imagemin":"imagemin ./app/application-data/images/phones/* -o=./app/application-data/img/phones",
+	"imagemin":"imagemin ./app/application-data/images/* -o=./app/application-data/images-minified/",
 	
 	"build-css": "postcss -u autoprefixer -r ./app/*/*/*.css",
 	
 	"build-pack":"webpack --progress",
    
-    "build": "npm run uglify && npm run imagemin && npm run build-css && npm run build-pack",
+    "build": "npm run imagemin && npm run build-css && npm run build-pack",
 		
     "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
   }
