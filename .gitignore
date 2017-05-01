@@ -1,7 +1,7 @@
 logs/*
 !.gitkeep
 node_modules/
-vendor/
+bower_components/
 tmp
 .DS_Store
 *.[oa]
@@ -11,3 +11,4 @@ tmp
 babeled/
 *.min.js
 *.min.css
+*.map
